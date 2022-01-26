@@ -1,3 +1,4 @@
+import About from "./components/About"
 import Contact from "./components/Contact"
 import Header from "./components/Header"
 import Home from "./components/Home"
@@ -8,6 +9,7 @@ function buildPage(){
     header();
     navContact();
     navHome();
+    navAbout();
     
 }
 function header() {
@@ -29,3 +31,11 @@ function navContact() {
       app.innerHTML = Contact();
     });
   }
+
+function navAbout() {
+  const aboutElem = document.querySelector(".nav-list__about")
+  aboutElem.addEventListener('click',()=>{
+    const app = document.querySelector('#app');
+    app.innerHTML = About();
+  })
+}
