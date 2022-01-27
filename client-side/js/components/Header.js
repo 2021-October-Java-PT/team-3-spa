@@ -1,9 +1,9 @@
 export default function Header(){
     return`
     <ul class='nav-list'>
-        <li class='nav-list__home'>Home</li>
-        <li class='nav-list__about'>About The Team</li>
-        <li class='nav-list__contact'>Contact Us</li>
+        <li class='nav-list__home'><button>Home</button></li>
+        <li class='nav-list__about'><button>About The Team</button></li>
+        <li class='nav-list__contact'><button>Contact Us</button></li>
         </ul>
     
     

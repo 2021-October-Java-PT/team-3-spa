@@ -1,0 +1,14 @@
+ *{
+    background-color: darkslategray;
+    color: white
+ }
+ 
+ .nav-list {
+     list-style: none;
+     display: flex;
+     justify-content: center;
+ }
+ h1{
+     display: flex;
+     justify-content: center;
+ }
