@@ -10,15 +10,19 @@ public class BodyOfWater {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
+    private String bodyOfWater;
+    private String bodyOfWaterDescription;
+    private String waterBodyMapUrl;
 
 
     public BodyOfWater(){
 
     }
 
-    public BodyOfWater (String name){
-        this.name=name;
+    public BodyOfWater (String bodyOfWater, String bodyOfWaterDescription, String waterBodyMapUrl){
+        this.bodyOfWater = bodyOfWater;
+        this.bodyOfWaterDescription = bodyOfWaterDescription;
+        this.waterBodyMapUrl = waterBodyMapUrl;
     }
 
     public Long getId() {
@@ -27,8 +31,16 @@ public class BodyOfWater {
 
     }
 
-    public String getName(){
-        return name;
+    public String getBodyOfWater(){
+        return bodyOfWater;
 
+    }
+
+    public String getBodyOfWaterDescription(){
+        return bodyOfWaterDescription;
+    }
+
+    public String getWaterBodyMapUrl(){
+        return waterBodyMapUrl;
     }
 }
