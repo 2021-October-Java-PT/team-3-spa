@@ -47,11 +47,10 @@ function navAbout() {
     app.innerHTML = About();
   });
 }
-
 function showPicture() {
   const pictureLocation = document.querySelector(".content");
   apiHelpers.getRequest(
-    "https://collectionapi.metmuseum.org/public/collection/v1/objects/50398",
+    "https://collectionapi.metmuseum.org/public/collection/v1/objects/248008",
     (metObject) => {
       pictureLocation.innerHTML = TestImg(metObject);
     }
