@@ -1,4 +1,4 @@
- *{
+ .homeBody{
     background-color: darkslategray;
     color: white
  }
@@ -10,5 +10,14 @@
  }
  h1{
      display: flex;
+     justify-content: center;
+ }
+ .contact-info {
+     display: grid;
+     justify-content: center;
+ }
+ .team-list {
+     list-style: none;
+     display: grid;
      justify-content: center;
  }
