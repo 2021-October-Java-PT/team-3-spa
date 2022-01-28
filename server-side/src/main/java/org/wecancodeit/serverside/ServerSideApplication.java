@@ -7,8 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ServerSideApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ServerSideApplication.class, args);
-		System.out.println("SERVER SIDE WIRED UP");
+//		SpringApplication.run(ServerSideApplication.class, args);
+//		System.out.println("SERVER SIDE WIRED UP");
+
 	}
 
 }
