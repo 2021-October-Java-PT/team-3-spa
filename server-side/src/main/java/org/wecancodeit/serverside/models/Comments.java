@@ -41,8 +41,8 @@ public class Comments {
         return java.util.Objects.equals(id, comments.id);
     }
 
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), id);
-    }
+//    public int hashCode() {
+//        return Objects.hash(super.hashCode(), id);
+//    }
 
 }
