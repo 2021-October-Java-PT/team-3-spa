@@ -68,3 +68,14 @@
   height: 50%;
   width: 75%;
 }
+
+.about_details{
+  margin: 1rem; 
+}
+
+.about_name{
+  margin: 1 rem;
+  list-style-type: none;
+  list-style:none;
+}
+
