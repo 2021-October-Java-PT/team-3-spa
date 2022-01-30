@@ -13,18 +13,16 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin
-public class BodyOfWaterRestController {
+public class CommentsRestController {
 
     @Resource
-    private BodyOfWaterRepo bodyOfWaterRepo;
+    private CommentsRepo commentsRepo;
 
-    @GetMapping("/api/bodies")
-    public Collection<BodyOfWater> getIslands(){
-        return (Collection<BodyOfWater>) bodyOfWaterRepo.findAll();
+    @GetMapping("/api/comments")
+    public Collection<Comments> getComments(){
+        return (Collection<Comments>) commentsRepo.findAll();
     }
 
-    @GetMapping("/api/bodies/{id}")
-    public Optional<BodyOfWater> getBodyOfWater(@PathVariable Long id){
-        return bodyOfWaterRepo.findById(id);
-    }
+
+
 }
