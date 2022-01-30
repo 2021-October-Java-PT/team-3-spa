@@ -1,23 +1,70 @@
- .homeBody{
-    background-color: darkslategray;
-    color: white
- }
- 
- .nav-list {
-     list-style: none;
-     display: flex;
-     justify-content: center;
- }
- h1{
-     display: flex;
-     justify-content: center;
- }
- .contact-info {
-     display: grid;
-     justify-content: center;
- }
- .team-list {
-     list-style: none;
-     display: grid;
-     justify-content: center;
- }
+.homeBody {
+  background-color: darkslategray;
+  color: white;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes welcome-header {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 100%;
+  }
+}
+
+.welcome-header {
+  display: flex;
+  justify-content: center;
+  font-family: "Kavivanar", cursive;
+  font-size: 3em;
+
+  animation: welcome-header 3.5s;
+  animation-delay: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* .welcome-header:hover {
+  0% {
+    visibility: hidden;
+  }
+  25% {
+    color: yellow;
+  }
+  50% {
+    color: teal;
+  }
+  100% {
+    color: red;
+  }
+}
+} */
+
+.jac-subheading {
+  line-height: 1.5;
+  font-size: 1.1em;
+}
+
+.contact-info {
+  display: grid;
+  justify-content: center;
+}
+.team-list {
+  list-style: none;
+  display: grid;
+  justify-content: center;
+}
+
+#page-image {
+  height: 50%;
+  width: 75%;
+}
