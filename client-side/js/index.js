@@ -29,6 +29,8 @@ function navHome() {
   homeElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Home();
+    showPicture();
+    
   });
 }
 
