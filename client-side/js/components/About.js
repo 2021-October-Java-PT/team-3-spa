@@ -1,19 +1,54 @@
-
-
-export default function About(){
-    return `
+export default function About() {
+  return `
     <h1>Our Team</h1>
-    <ul class='about_name'>
-    <li class='about_name'>Jacob Stout</li>        
-    <p class="about_details">Info about Jake</p>
-    <li class='about_name'>Martel Barkley</li>
-    <p class="about_details">Info about Martel</p>
-    <li class='about_name'>Michael Johnson</li>
-    <p class="about_details">Info about Michael</p>
-    <li class='about_name'>Hesan Haghnazar</li>
-    <p class="about_details">Info about Hesan</p>
-    <li class='about_name'>Cameron Stephens</li>  
-    <p class="about_details">Info about Cameron</p>
-    </ul>
+   <div class="grid-container-about">
+        <div class="grid-item-image">
+            <img src="/assets/congo-rainforest.jpg" class="grid-item-image"/>
+        </div>
+        <div class="grid-item-bio">
+        <p><b>Martel Barkley:</b></p>
+        </div>
+
+   </div>
+
+   <div class="grid-container-about">
+        <div class="grid-item-image">
+            <img src="/assets/congo-rainforest.jpg" class="grid-item-image"/>
+        </div>
+        <div class="grid-item-bio">
+        <p><b>Hesan Haghnazar:</b></p>
+        </div>
+
+   </div>
+
+   <div class="grid-container-about">
+        <div class="grid-item-image">
+            <img src="/assets/congo-rainforest.jpg" class="grid-item-image"/>
+        </div>
+        <div class="grid-item-bio">
+        <p><b>Michael Johnson:</b></p>
+        </div>
+
+   </div>
+
+   <div class="grid-container-about">
+        <div class="grid-item-image">
+            <img src="/assets/congo-rainforest.jpg" class="grid-item-image"/>
+        </div>
+        <div class="grid-item-bio">
+        <p><b>Cameron Stephens:</b> experiences at their disposal. Detail-oriented and capable of adapting in fast paced environments. Brings pride and passion to every task they undertake.</p>
+        </div>
+
+   </div>
+
+   <div class="grid-container-about">
+        <div class="grid-item-image">
+            <img src="/assets/congo-rainforest.jpg" class="grid-item-image"/>
+        </div>
+        <div class="grid-item-bio">
+        <p><b>Jacob Stout:</b></p>
+        </div>
+
+   </div>
     `;
 }

@@ -3,6 +3,15 @@
   color: white;
 }
 
+p {
+  font-style: normal;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+b {
+  font-weight: bold;
+}
+
 .nav-list {
   list-style: none;
   display: flex;
@@ -69,13 +78,36 @@
   width: 75%;
 }
 
-.about_details{
-  margin: 1rem; 
+.about_details {
+  margin: 1rem;
 }
 
-.about_name{
+.about_name {
   margin: 1 rem;
   list-style-type: none;
-  list-style:none;
+  list-style: none;
 }
 
+/* about us */
+.grid-container-about {
+  display: grid;
+  grid-template-columns: 33% 67%;
+}
+
+.grid-item-bio {
+  text-align: center;
+  height: 100px;
+  margin-bottom: 5%;
+  background-color: brown;
+}
+
+.grid-item-bio:hover {
+  border: cornsilk;
+  border-radius: 1px;
+}
+
+.grid-item-image {
+  padding-right: 1px;
+  display: inline-block;
+  max-inline-size: 1fr;
+}
