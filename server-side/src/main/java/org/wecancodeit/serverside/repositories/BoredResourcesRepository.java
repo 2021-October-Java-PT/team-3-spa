@@ -6,6 +6,6 @@ import org.wecancodeit.serverside.models.BoredResources;
 import java.util.Optional;
 
 
-public interface BoredRepository extends CrudRepository<BoredResources, Long> {
+public interface BoredResourcesRepository extends CrudRepository<BoredResources, Long> {
     Optional<BoredResources> findByName(String name);
 }
