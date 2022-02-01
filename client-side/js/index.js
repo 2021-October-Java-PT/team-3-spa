@@ -49,6 +49,7 @@ function navAbout() {
     app.innerHTML = About();
   });
 }
+
 function showPicture() {
   const pictureLocation = document.querySelector(".content");
   apiHelpers.getRequest(
