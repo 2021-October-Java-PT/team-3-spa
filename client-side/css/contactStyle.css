@@ -55,10 +55,10 @@ p {
   background: #0cbb46 url("../assets/congo-rainforest.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: auto; */
   
-  width: 100%;
-  height: 450px;
+  width: 1000px;
+  height: 500px;
   z-index: -1;
   opacity: 0.4;
 }
@@ -141,6 +141,19 @@ p {
   .grid {
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+  }
+
+  .bg-image{  
+    position: absolute;
+    background: #0cbb46 url("../assets/congo-rainforest.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    
+    width: auto;
+    height: 200px;
+    z-index: -1;
+    opacity: 0.4;
   }
 
   #section-a .content-text {

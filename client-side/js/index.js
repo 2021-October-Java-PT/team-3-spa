@@ -52,6 +52,7 @@ function navAbout() {
   });
 }
 
+
 function navActivities() {
   const app = document.querySelector("#app");
   const activitiesElem = document.querySelector(".nav-list__activities");
@@ -189,6 +190,7 @@ function randomizeAgain() {
     }
   });
 }
+
 
 function showPicture() {
   const pictureLocation = document.querySelector(".content");
