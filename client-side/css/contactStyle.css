@@ -137,7 +137,7 @@ p {
 }
 
 /* Media Queries */
-@media (min-width: 700px) {
+@media (min-width: 1133px) {
   .grid {
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
