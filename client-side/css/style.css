@@ -1,7 +1,7 @@
 .homeBody {
   /* background-color: darkslategray; */
-  background-image: linear-gradient(to right bottom, #1700ff, #e700b3, #ff0068, #ff532c, #ffa400, #ffb300, #ffc200, #fed100, #ffae00, #ff8800, #ff5b00, #ff0000);
-  color: white;
+  background-image: linear-gradient(to bottom, #ffffff, #2ebda38c);
+  color: rgb(155, 150, 150);
 }
 
 p {
