@@ -106,5 +106,5 @@ export default function Contact() {
         </footer>
     </body>
     </html>
-      `;
+      `
   }

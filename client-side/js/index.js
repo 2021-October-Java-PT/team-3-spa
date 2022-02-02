@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import TestImg from "./components/TestImg";
+import TestImg2 from "./components/TestImg2";
 import apiHelpers from "./components/apiHelpers";
 
 buildPage();
@@ -15,6 +16,7 @@ function buildPage() {
   navHome();
   navAbout();
   showPicture();
+  showPicture2();
 }
 function header() {
   const headerElem = document.querySelector(".header");
@@ -30,6 +32,7 @@ function navHome() {
     const app = document.querySelector("#app");
     app.innerHTML = Home();
     showPicture();
+    showPicture2();
     
   });
 }
@@ -58,4 +61,14 @@ function showPicture() {
       pictureLocation.innerHTML = TestImg(metObject);
     }
   );
+
+  function showPicture2() {
+    const pictureLocation = document.querySelector(".content2");
+    apiHelpers.getRequest(
+      "https://collectionapi.metmuseum.org/public/collection/v1/objects/248008",
+      (metObject) => {
+        pictureLocation.innerHTML = TestImg2(metObject);
+      }
+    );
+  }
 }
