@@ -43,22 +43,6 @@ b {
   animation-iteration-count: infinite;
 }
 
-/* .welcome-header:hover {
-  0% {
-    visibility: hidden;
-  }
-  25% {
-    color: yellow;
-  }
-  50% {
-    color: teal;
-  }
-  100% {
-    color: red;
-  }
-}
-} */
-
 .jac-subheading {
   line-height: 1.5;
   font-size: 1.1em;
@@ -92,12 +76,12 @@ b {
 /* about us */
 .grid-container-about {
   display: grid;
-  grid-template-columns: 33% 67%;
+  grid-template-columns: 43% 57%;
 }
 
 .grid-item-bio {
   text-align: center;
-  height: 100px;
+  height: 150px;
   margin-bottom: 5%;
   background-color: brown;
 }
@@ -107,8 +91,21 @@ b {
   border-radius: 1px;
 }
 
-.grid-item-image {
-  padding-right: 1px;
+#grid-item-image {
   display: inline-block;
-  max-inline-size: 1fr;
+  max-width: 43%;
+  padding-right: 1px;
+}
+
+/* Activities */
+
+/* Activity Generator */
+.activity-item__list {
+  list-style: none;
+  text-align: left;
+}
+
+.activity-item {
+  list-style: none;
+  text-align: left;
 }

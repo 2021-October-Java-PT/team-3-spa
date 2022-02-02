@@ -1,4 +1,6 @@
 import About from "./components/About";
+import Activities from "./components/Activities";
+import ActivityGenerator from "./components/ActivityGenerator";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -13,6 +15,7 @@ function buildPage() {
   footer();
   navContact();
   navHome();
+  navActivities();
   navAbout();
   showPicture();
 }
@@ -30,7 +33,6 @@ function navHome() {
     const app = document.querySelector("#app");
     app.innerHTML = Home();
     showPicture();
-    
   });
 }
 
@@ -49,6 +51,146 @@ function navAbout() {
     app.innerHTML = About();
   });
 }
+
+
+function navActivities() {
+  const app = document.querySelector("#app");
+  const activitiesElem = document.querySelector(".nav-list__activities");
+  activitiesElem.addEventListener("click", () => {
+    app.innerHTML = Activities();
+  });
+  activityRandomizer();
+}
+
+function activityRandomizer() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", (event) => {
+    if (event.target.classList.contains("cooking-button")) {
+      apiHelpers.getRequest(
+        "https://www.boredapi.com/api/activity?type=cooking",
+        (boredObj) => {
+          app.innerHTML = ActivityGenerator(boredObj);
+        }
+      );
+    }
+
+    if (event.target.classList.contains("education-button")) {
+      apiHelpers.getRequest(
+        "https://www.boredapi.com/api/activity?type=education&price=0",
+        (boredObj) => {
+          app.innerHTML = ActivityGenerator(boredObj);
+        }
+      );
+    }
+
+    if (event.target.classList.contains("music-button")) {
+      apiHelpers.getRequest(
+        "https://www.boredapi.com/api/activity?type=music&price=0",
+        (boredObj) => {
+          app.innerHTML = ActivityGenerator(boredObj);
+        }
+      );
+    }
+
+    if (event.target.classList.contains("recreational-button")) {
+      apiHelpers.getRequest(
+        "https://www.boredapi.com/api/activity?type=recreational&price=0",
+        (boredObj) => {
+          app.innerHTML = ActivityGenerator(boredObj);
+        }
+      );
+    }
+
+    if (event.target.classList.contains("relaxation-button")) {
+      apiHelpers.getRequest(
+        "https://www.boredapi.com/api/activity?type=relaxation&price=0",
+        (boredObj) => {
+          app.innerHTML = ActivityGenerator(boredObj);
+        }
+      );
+    }
+
+    if (event.target.classList.contains("social-button")) {
+      apiHelpers.getRequest(
+        "https://www.boredapi.com/api/activity?type=social&price=0",
+        (boredObj) => {
+          app.innerHTML = ActivityGenerator(boredObj);
+        }
+      );
+    }
+  });
+  activitiesRefresh();
+  randomizeAgain();
+}
+
+function activitiesRefresh() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", (event) => {
+    if (event.target.classList.contains("reset-activities")) {
+      app.innerHTML = Activities();
+    }
+  });
+}
+
+function randomizeAgain() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", (event) => {
+    if (event.target.classList.contains("reset-cooking")) {
+      apiHelpers.getRequest(
+        "https://www.boredapi.com/api/activity?type=cooking&price=0",
+        (boredObj) => {
+          app.innerHTML = ActivityGenerator(boredObj);
+        }
+      );
+    }
+
+    if (event.target.classList.contains("reset-education")) {
+      apiHelpers.getRequest(
+        "https://www.boredapi.com/api/activity?type=education&price=0",
+        (boredObj) => {
+          app.innerHTML = ActivityGenerator(boredObj);
+        }
+      );
+    }
+
+    if (event.target.classList.contains("reset-music")) {
+      apiHelpers.getRequest(
+        "https://www.boredapi.com/api/activity?type=music",
+        (boredObj) => {
+          app.innerHTML = ActivityGenerator(boredObj);
+        }
+      );
+    }
+
+    if (event.target.classList.contains("reset-recreation")) {
+      apiHelpers.getRequest(
+        "https://www.boredapi.com/api/activity?type=recreational&price=0",
+        (boredObj) => {
+          app.innerHTML = ActivityGenerator(boredObj);
+        }
+      );
+    }
+
+    if (event.target.classList.contains("reset-relaxation")) {
+      apiHelpers.getRequest(
+        "https://www.boredapi.com/api/activity?type=relaxation&price=0",
+        (boredObj) => {
+          app.innerHTML = ActivityGenerator(boredObj);
+        }
+      );
+    }
+
+    if (event.target.classList.contains("reset-social")) {
+      apiHelpers.getRequest(
+        "https://www.boredapi.com/api/activity?type=social&price=0",
+        (boredObj) => {
+          app.innerHTML = ActivityGenerator(boredObj);
+        }
+      );
+    }
+  });
+}
+
 
 function showPicture() {
   const pictureLocation = document.querySelector(".content");
