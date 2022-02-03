@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import TestImg from "./components/TestImg";
 import apiHelpers from "./components/apiHelpers";
+import Fishes from "./components/Fishes";
 
 buildPage();
 
@@ -18,15 +19,19 @@ function buildPage() {
   navActivities();
   navAbout();
   showPicture();
+  navFishes();
 }
+
 function header() {
   const headerElem = document.querySelector(".header");
   headerElem.innerHTML = Header();
 }
+
 function footer() {
   const footerElem = document.querySelector(".footer");
   footerElem.innerHTML = Footer();
 }
+
 function navHome() {
   const homeElem = document.querySelector(".nav-list__home");
   homeElem.addEventListener("click", () => {
@@ -200,4 +205,17 @@ function showPicture() {
       pictureLocation.innerHTML = TestImg(metObject);
     }
   );
+}
+
+
+function navFishes() {
+  const app = document.querySelector("#app");
+  const fishesElem = document.querySelector(".nav-list__fishes");
+  fishesElem.addEventListener("click", () => {
+    console.log("botton fire")
+    // apiHelpers.getRequest("https://www.fishwatch.gov/api/species", (fishes) => {
+    //   app.innerHTML = Fishes(fishes);
+    // });
+
+  });
 }
