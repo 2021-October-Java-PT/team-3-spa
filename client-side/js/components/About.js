@@ -31,7 +31,7 @@ export default function About() {
 
    <div class="grid-container-about">
         <div class="grid-item-image">
-            <img src="../assets/congo-rainforest.jpg" id="grid-item-image2"/>
+            <img src="/assets/congo-rainforest.jpg" id="grid-item-image"/>
         </div>
         <div class="grid-item-bio">
         <p><b>Cameron Stephens:</b> Versatile professional with a variety of experiences at their disposal. Detail-oriented and capable of adapting in fast paced environments. Brings pride and passion to every task they undertake.</p>
