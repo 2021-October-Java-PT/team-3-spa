@@ -13,7 +13,6 @@ buildPage();
 function buildPage() {
   home();
   header();
-  footer();  
   navContact();
   navHome();
   navActivities();
@@ -26,18 +25,14 @@ function home(){
   const app = document.querySelector("#app");
   app.innerHTML = Home();
   showPicture();
-  footer();
 }
 
 function header() {
   const headerElem = document.querySelector(".header");
   headerElem.innerHTML = Header();
 }
-function footer() {
-  const footerElem = document.querySelector(".footer");
-  footerElem.innerHTML = Footer();
-  console.log('test')
-}
+
+
 
 function navHome() {
   const homeElem = document.querySelector(".nav-list__home");
@@ -45,7 +40,6 @@ function navHome() {
     const app = document.querySelector("#app");
     app.innerHTML = Home();
     showPicture();
-    footer();
   });
 }
 
@@ -63,7 +57,6 @@ function navAbout() {
   aboutElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = About();
-    footer();
   });
 }
 
@@ -137,7 +130,6 @@ function activityRandomizer() {
   });
   activitiesRefresh();
   randomizeAgain();
-  footer();
 }
 
 function activitiesRefresh() {
@@ -146,7 +138,6 @@ function activitiesRefresh() {
     if (event.target.classList.contains("reset-activities")) {
       app.innerHTML = Activities();
     }
-    footer();
   });
 }
 
@@ -207,7 +198,7 @@ function randomizeAgain() {
       );
     }
   });
-  footer();
+  // footer();
 }
 
 
