@@ -19,6 +19,7 @@ function buildPage() {
   navAbout();
   showPicture();
 }
+
 function header() {
   const headerElem = document.querySelector(".header");
   headerElem.innerHTML = Header();
@@ -201,3 +202,6 @@ function showPicture() {
     }
   );
 }
+
+
+

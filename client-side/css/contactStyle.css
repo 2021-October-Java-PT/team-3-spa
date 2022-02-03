@@ -1,5 +1,13 @@
 /* Core Styles */
 
+
+/* .bg-image {
+  background-image: linear-gradient(#ffffff, #2ebda38c);
+  color: rgb(155, 150, 150);
+  height: auto; 
+  background-image: no-repeat;
+} */
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
