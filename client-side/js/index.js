@@ -11,13 +11,22 @@ import apiHelpers from "./components/apiHelpers";
 buildPage();
 
 function buildPage() {
+  home();
   header();
-  footer();
+  footer();  
   navContact();
   navHome();
   navActivities();
   navAbout();
   showPicture();
+}
+
+function home(){
+  const homeElem = document.querySelector(".nav-list__home");
+  const app = document.querySelector("#app");
+  app.innerHTML = Home();
+  showPicture();
+  footer();
 }
 
 function header() {
@@ -27,13 +36,16 @@ function header() {
 function footer() {
   const footerElem = document.querySelector(".footer");
   footerElem.innerHTML = Footer();
+  console.log('test')
 }
+
 function navHome() {
   const homeElem = document.querySelector(".nav-list__home");
   homeElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Home();
     showPicture();
+    footer();
   });
 }
 
@@ -42,6 +54,7 @@ function navContact() {
   contactElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Contact();
+    
   });
 }
 
@@ -50,6 +63,7 @@ function navAbout() {
   aboutElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = About();
+    footer();
   });
 }
 
@@ -119,9 +133,11 @@ function activityRandomizer() {
         }
       );
     }
+    
   });
   activitiesRefresh();
   randomizeAgain();
+  footer();
 }
 
 function activitiesRefresh() {
@@ -130,6 +146,7 @@ function activitiesRefresh() {
     if (event.target.classList.contains("reset-activities")) {
       app.innerHTML = Activities();
     }
+    footer();
   });
 }
 
@@ -190,6 +207,7 @@ function randomizeAgain() {
       );
     }
   });
+  footer();
 }
 
 
