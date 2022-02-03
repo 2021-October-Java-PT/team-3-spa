@@ -6,6 +6,7 @@ export default function Header() {
         <li class='nav-list__about'><button>About The Team</button></li>
         <li class='nav-list__contact'><button>Contact Us</button></li>
         
+        
         </ul>
     
     
