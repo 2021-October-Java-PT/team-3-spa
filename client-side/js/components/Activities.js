@@ -4,7 +4,7 @@ export default function Activities() {
   
   <p> Oh no, you're bored!  </p>
   
-  <p>It's time to play some games.  Use the buttons below to play the Mystery game.  You will be given tasks to play with your friends.  Play and have fun!</p>
+  <p>It's time to play some games.  Use the buttons below to play the Mystery Educator game.  You will be given tasks to play with your friends.  Play and have fun!</p>
 
   <iframe src="https://giphy.com/embed/l378AEZceMwWboAQE" width="480" height="329" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
     
