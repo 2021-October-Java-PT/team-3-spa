@@ -7,10 +7,12 @@ export default function ActivityGenerator(boredObj) {
             <h3 class="activity-item">Participants: ${boredObj.participants}</h3>
             
         
+
         <button class="reset-cooking" id="project-button" >Try Again</button>
         <br></br>
         <button class="reset-activities" id="project-button"> Activities</button>
         
+
 
         `;
   }

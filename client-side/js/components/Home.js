@@ -21,9 +21,9 @@ export default function Home() {
         <h1 class="welcome-header">Mystery Educator!</h1>
         <h2 class="jac-subheading">Presented by JAC Enterpises</h2>
 
-        
-  
-  
+
+        <p> Mystery Educator is for children ages 6-13.</p>
+
         <div class="content"></div>
       </div>
       <footer class="footer"></footer>
