@@ -1,6 +1,9 @@
-export default function TestImg(metObject) {
+
+
+export default function TestImg() {
   return `
-    <img id=page-image src='${metObject.primaryImageSmall}'/>
-    
+
+  <iframe src="https://giphy.com/embed/dtZmWLCGcGeuPYj2dd" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>
+
     `;
 }

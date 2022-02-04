@@ -2,8 +2,9 @@
   /* background-color: darkslategray; */
   background-image: linear-gradient(to bottom, #ffffff, #2ebda38c);
   color: rgb(41, 64, 72);
-  height: 1200px; 
-  background-image: no-repeat;
+   
+  /* background-image: no-repeat; */
+  background-size: 100%;
 }
 
 p {
@@ -82,24 +83,32 @@ b {
 .grid-container-about {
   display: grid;
   grid-template-columns: 43% 57%;
+  gap: 3rem;
 }
 
 .grid-item-bio {
   text-align: center;
-  height: 150px;
+  height: fit-content;
   margin-bottom: 5%;
-  background-color: brown;
+  background-color: rgb(89, 121, 226);
+  border-radius: 20%;
+  font-size: medium;
+
 }
 
-.grid-item-bio:hover {
-  border: cornsilk;
-  border-radius: 1px;
-}
+/* .grid-item-bio:hover {
+  background-color: black;
+  border-radius: 10%;
+} */
 
-#grid-item-image {
-  display: inline-block;
-  max-width: 43%;
-  padding-right: 1px;
+.grid-item-image {
+  height: auto;
+  width: 25%;  
+  
+}
+.profileImage{
+  height: auto;
+  width: 50vh;
 }
 
 /* Activities */

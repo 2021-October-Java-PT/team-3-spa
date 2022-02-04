@@ -21,12 +21,14 @@ export default function ActivityGenerator(boredObj) {
   if (boredObj.type == "education") {
     return `
     <div><iframe width="480" height="480" frameBorder="0"  src="https://giphy.com/embed/znA8n5vnpH4kCw5tWm/video" class="giphy-embed" allowFullScreen></iframe></div>
+
     <h2 id="activity-listing">${boredObj.activity}</h2>
     
     <h3 class="activity-item">Participants: ${boredObj.participants}</h3>
             
         
         <button class="reset-education" id="project-button">Try Again</button>
+
         <br></br>
         <button class="reset-activities" id="project-button"> Activities</button>
         <audio level up>
