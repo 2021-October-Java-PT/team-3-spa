@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class BoredResources {
+public class GameResources {
 
     @Id
     @GeneratedValue
@@ -13,10 +13,10 @@ public class BoredResources {
     private String name;
     private String gamesToPlayUrl;
 
-    public BoredResources(){
+    public GameResources(){
 
     }
-    public BoredResources(String name, String gamesToPlayUrl){
+    public GameResources(String name, String gamesToPlayUrl){
         this.name = name;
         this.gamesToPlayUrl = gamesToPlayUrl;
     }

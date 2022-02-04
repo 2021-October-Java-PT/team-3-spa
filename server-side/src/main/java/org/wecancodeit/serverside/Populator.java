@@ -2,9 +2,9 @@ package org.wecancodeit.serverside;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.wecancodeit.serverside.models.BoredResources;
-import org.wecancodeit.serverside.repositories.BoredResourcesRepository;
+import org.wecancodeit.serverside.repositories.GameResourcesRepository;
 import org.wecancodeit.serverside.repositories.NoaaResourcesRepository;
+import org.wecancodeit.serverside.models.GameResources;
 import org.wecancodeit.serverside.models.NoaaResources;
 
 
@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 public class Populator implements CommandLineRunner {
 
         @Resource
-        private BoredResourcesRepository boredRepo;
+        private GameResourcesRepository gameRepo;
 
         @Resource
         private NoaaResourcesRepository noaaResourceRepo;
@@ -24,23 +24,23 @@ public class Populator implements CommandLineRunner {
         @Override
         public void run(String... args) throws Exception {
 
-                BoredResources wordle = new BoredResources("Wordle","https://www.powerlanguage.co.uk/wordle/");
-                BoredResources cookieClicker = new BoredResources("Cookie Clicker","https://orteil.dashnet.org/cookieclicker/");
-                BoredResources fortnite = new BoredResources("Fortnite","https://www.epicgames.com/fortnite/en-US/home");
-                BoredResources bigFarm = new BoredResources("Big Farm","https://bigfarm.goodgamestudios.com/");
-                BoredResources raid = new BoredResources("Raid: Shadow Legends","https://raidshadowlegends.com/");
-                BoredResources base = new BoredResources("Base Attack Force","https://www.baseattackforce.com/");
-                BoredResources war = new BoredResources("War Thunder","https://warthunder.com/en");
-                BoredResources rail = new BoredResources("Rail Nation","https://www.railnation.us/");
+                GameResources wordle = new GameResources("Wordle","https://www.powerlanguage.co.uk/wordle/");
+                GameResources cookieClicker = new GameResources("Cookie Clicker","https://orteil.dashnet.org/cookieclicker/");
+                GameResources fortnite = new GameResources("Fortnite","https://www.epicgames.com/fortnite/en-US/home");
+                GameResources bigFarm = new GameResources("Big Farm","https://bigfarm.goodgamestudios.com/");
+                GameResources raid = new GameResources("Raid: Shadow Legends","https://raidshadowlegends.com/");
+                GameResources base = new GameResources("Base Attack Force","https://www.baseattackforce.com/");
+                GameResources war = new GameResources("War Thunder","https://warthunder.com/en");
+                GameResources rail = new GameResources("Rail Nation","https://www.railnation.us/");
 
-                boredRepo.save(wordle);
-                boredRepo.save(cookieClicker);
-                boredRepo.save(fortnite);
-                boredRepo.save(bigFarm);
-                boredRepo.save(raid);
-                boredRepo.save(base);
-                boredRepo.save(war);
-                boredRepo.save(rail);
+                gameRepo.save(wordle);
+                gameRepo.save(cookieClicker);
+                gameRepo.save(fortnite);
+                gameRepo.save(bigFarm);
+                gameRepo.save(raid);
+                gameRepo.save(base);
+                gameRepo.save(war);
+                gameRepo.save(rail);
 
 
                 NoaaResources rainbowFish = new NoaaResources("The Rainbow Fish", "Marcus Pfister","https://www.amazon.com/Rainbow-Fish-Marcus-Pfister/dp/1558580093/ref=zg_bs_2823_2/133-6260264-4696624?pd_rd_i=1558580093&psc=1");
