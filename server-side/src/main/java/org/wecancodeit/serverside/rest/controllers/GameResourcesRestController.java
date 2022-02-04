@@ -29,7 +29,7 @@ public class GameResourcesRestController {
     }
 
     @GetMapping("/api/game-resources/{id}")
-    public Optional<GameResources> getGameResources(@PathVariable Long id){
+    public Optional<GameResources> getGameResource(@PathVariable Long id){
         return gameRepo.findById(id);
     }
 
