@@ -36,7 +36,8 @@ export default function About() {
         
         </div>
         <div class="grid-item-bio">
-        <p><b>Cameron Stephens:</b> Versatile professional with a variety of experiences at their disposal. Detail-oriented and capable of adapting in fast paced environments. Brings pride and passion to every task they undertake.</p>
+        <p><b>Cameron Stephens:</b> Versatile professional with a variety of experiences at their disposal. Detail-oriented and capable of adapting in fast paced environments. Brings pride and passion to every task they undertake. 
+        Has a combined 10 years of experience in video production and consumer-facing support that allows for adaptable problem solving and teamwork skills. Proficient in JavaScript, HTML, CSS, API, Java, and Spring. Scrum and Agile enthusiast with TDD mindset.</p>
         </div>
 
    </div>

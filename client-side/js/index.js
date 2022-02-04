@@ -6,7 +6,7 @@ import Contact from "./components/Contact";
 import Game from "./components/Game";
 import Games from "./components/Games";
 import Header from "./components/Header";
-import Home from "./components/Home"
+import Home from "./components/Home";
 import TestImg from "./components/TestImg";
 import apiHelpers from "./components/apiHelpers";
 import crud from "./crud/crud";
@@ -22,11 +22,13 @@ function buildPage() {
   navActivities();
   navAbout();
   showPicture();
+
   navGames();
   
+
 }
 
-function home(){
+function home() {
   const homeElem = document.querySelector(".nav-list__home");
   const app = document.querySelector("#app");
   app.innerHTML = Home();
@@ -51,7 +53,7 @@ function navArtGallery() {
   const artGalleryElem = document.querySelector(".nav-list__artGallery");
   artGalleryElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
-    console.log('firing')
+    console.log("firing");
     app.innerHTML = ArtGallery();
     // fetch("https://ids.lib.harvard.edu/ids/iiif/426398978/full/,150/0/default.jpg")
     //   .then(res = res.json())
@@ -69,7 +71,6 @@ function navContact() {
   contactElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Contact();
-    
   });
 }
 
@@ -80,6 +81,7 @@ function navAbout() {
     app.innerHTML = About();
   });
 }
+
 
 function navGames() {
   const app = document.querySelector("#app");
@@ -104,6 +106,7 @@ function renderGameInfo() {
     }
   })
 }
+
 
 
 function navActivities() {
@@ -171,8 +174,8 @@ function activityRandomizer() {
         }
       );
     }
-    
   });
+
   activitiesRefresh();
   randomizeAgain();
 }
@@ -243,17 +246,15 @@ function randomizeAgain() {
       );
     }
   });
- 
 }
-
 
 function showPicture() {
   const pictureLocation = document.querySelector(".content");
   // apiHelpers.getRequest(
   //   "https://collectionapi.metmuseum.org/public/collection/v1/objects/248008",
   //   (metObject) => {
-      pictureLocation.innerHTML = TestImg();
-    // }
+  pictureLocation.innerHTML = TestImg();
+  // }
   // );
 }
 
@@ -266,6 +267,3 @@ function artGalleryPopulator() {
     }
   );
 }
-
-
-

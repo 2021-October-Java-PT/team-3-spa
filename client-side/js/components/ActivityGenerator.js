@@ -7,13 +7,12 @@ export default function ActivityGenerator(boredObj) {
             <h3 class="activity-item">Participants: ${boredObj.participants}</h3>
             
         
-        <button class="reset-cooking" id="project-button">Try Again</button>
+
+        <button class="reset-cooking" id="project-button" >Try Again</button>
         <br></br>
         <button class="reset-activities" id="project-button"> Activities</button>
-        <audio level up>
-            <source src="assets/Level Up Sound Effect.mp3" type="audio/mpeg"> 
-            Your browser does not support the audio tag. 
-        </audio>
+        
+
 
         `;
   }
@@ -27,13 +26,11 @@ export default function ActivityGenerator(boredObj) {
     <h3 class="activity-item">Participants: ${boredObj.participants}</h3>
             
         
-        <button class="reset-education" id="project-button">Try Again</button>
+        <button class="reset-education" id="project-button"  >Try Again</button>
 
         <br></br>
         <button class="reset-activities" id="project-button"> Activities</button>
-        <audio level up>
-            <source url="https://www.youtube.com/watch?v=CTvlzkV379s" >  
-        </audio>
+       
     `;
   }
 
@@ -48,9 +45,7 @@ export default function ActivityGenerator(boredObj) {
         <button class="reset-music" id="project-button">Try Again</button>
         <br></br>
         <button class="reset-activities" id="project-button"> Activities</button>
-        <audio level up>
-            <source src="assets/Level Up Sound Effect.mp3" type="audio/mpeg">  
-        </audio>
+       
     `;
   }
 
@@ -65,9 +60,7 @@ export default function ActivityGenerator(boredObj) {
         <button class="reset-recreation" id="project-button">Try Again</button>
         <br></br>
         <button class="reset-activities" id="project-button"> Activities</button>
-        <audio level up>
-            <source src="assets/Level Up Sound Effect.mp3" type="audio/mpeg">  
-        </audio>
+        
     `;
   }
 
@@ -82,9 +75,7 @@ export default function ActivityGenerator(boredObj) {
         <button class="reset-relaxation" id="project-button">Try Again</button>
         <br></br>
         <button class="reset-activities" id="project-button"> Activities</button>
-        <audio level up>
-            <source src="assets/Level Up Sound Effect.mp3" type="audio/mpeg">  
-        </audio>
+        
     `;
   }
 
@@ -99,9 +90,7 @@ export default function ActivityGenerator(boredObj) {
         <button class="reset-social" id="project-button">Try Again</button>
         <br></br>
         <button class="reset-activities" id="project-button"> Activities</button>
-        <audio level up>
-            <source src="assets/Level Up Sound Effect.mp3" type="audio/mpeg">  
-        </audio>
+       
     `;
   }
 }
