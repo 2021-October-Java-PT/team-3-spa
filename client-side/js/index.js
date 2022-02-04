@@ -85,7 +85,7 @@ function navGames() {
   const app = document.querySelector("#app");
   const gameElem = document.querySelector(".nav-list__games");
   gameElem.addEventListener("click", () => {
-    crud.getRequest('http://localhost:8080/game-resources', games => {
+    crud.getRequest('http://localhost:8080/api/game-resources', games => {
       app.innerHTML = Games(games);
     })
     renderGameInfo();
@@ -94,10 +94,11 @@ function navGames() {
 }
 
 function renderGameInfo() {
+  const app = document.querySelector("#app");
   app.addEventListener('click', (event) => {
     if (event.target.classList.contains('games-list__title')) {
       const gameId = event.target.querySelector('#gameId').value;
-      crud.getRequest(`http://localhost:8080/game-resources/${gameId}`, game => {
+      crud.getRequest(`http://localhost:8080/api/game-resources/${gameId}`, game => {
         app.innerHTML = Game(game);
       })
     }
