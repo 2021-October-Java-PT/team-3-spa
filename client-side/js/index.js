@@ -204,12 +204,12 @@ function randomizeAgain() {
 
 function showPicture() {
   const pictureLocation = document.querySelector(".content");
-  apiHelpers.getRequest(
-    "https://collectionapi.metmuseum.org/public/collection/v1/objects/248008",
-    (metObject) => {
-      pictureLocation.innerHTML = TestImg(metObject);
-    }
-  );
+  // apiHelpers.getRequest(
+  //   "https://collectionapi.metmuseum.org/public/collection/v1/objects/248008",
+  //   (metObject) => {
+      pictureLocation.innerHTML = TestImg();
+    // }
+  // );
 }
 
 

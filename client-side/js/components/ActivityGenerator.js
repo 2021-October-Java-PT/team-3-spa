@@ -24,7 +24,7 @@ export default function ActivityGenerator(boredObj) {
     <h3>${boredObj.activity}</h3>
     <ul class="activity-item__list>
             <li class="activity-item">Participants: ${boredObj.participants}</li>
-            <li class="activity-item">Link: ${boredObj.link}</li>
+            <li class="activity-item">Link: ${boredObj.link} </li>
         </ul>
         <button class="reset-education">Try Again</button>
         <br></br>
