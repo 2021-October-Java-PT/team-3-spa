@@ -38,10 +38,11 @@ public class GameResourcesRestController {
         JSONObject newGameResource = new JSONObject(body);
         String name = newGameResource.getString("name");
         String gamesToPlayUrl = newGameResource.getString("gamesToPlayUrl");
+        String gameWalkThroughVid = newGameResource.getString("gameWalkThroughVid");
         Optional<GameResources> gameResourcesToAdopt = gameRepo.findByName(name);
 
         if (gameResourcesToAdopt.isEmpty()) {
-            GameResources gameResourcesToAdd = new GameResources(name,gamesToPlayUrl);
+            GameResources gameResourcesToAdd = new GameResources(name,gamesToPlayUrl,gameWalkThroughVid);
             gameRepo.save(gameResourcesToAdd);
         }
 

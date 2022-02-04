@@ -24,14 +24,15 @@ public class Populator implements CommandLineRunner {
         @Override
         public void run(String... args) throws Exception {
 
-                GameResources wordle = new GameResources("Wordle","https://www.powerlanguage.co.uk/wordle/");
-                GameResources cookieClicker = new GameResources("Cookie Clicker","https://orteil.dashnet.org/cookieclicker/");
-                GameResources fortnite = new GameResources("Fortnite","https://www.epicgames.com/fortnite/en-US/home");
-                GameResources bigFarm = new GameResources("Big Farm","https://bigfarm.goodgamestudios.com/");
-                GameResources raid = new GameResources("Raid: Shadow Legends","https://raidshadowlegends.com/");
-                GameResources base = new GameResources("Base Attack Force","https://www.baseattackforce.com/");
-                GameResources war = new GameResources("War Thunder","https://warthunder.com/en");
-                GameResources rail = new GameResources("Rail Nation","https://www.railnation.us/");
+                GameResources wordle = new GameResources("Wordle","https://www.powerlanguage.co.uk/wordle/","https://youtu.be/AQtMRBMw7NM");
+                GameResources cookieClicker = new GameResources("Cookie Clicker","https://orteil.dashnet.org/cookieclicker/","https://youtu.be/lQKCD2ZB25I");
+                GameResources fortnite = new GameResources("Fortnite","https://www.epicgames.com/fortnite/en-US/home","https://youtu.be/1GI6GRVHHmE");
+                GameResources bigFarm = new GameResources("Big Farm","https://bigfarm.goodgamestudios.com/","https://youtu.be/0l-apvVrP_s");
+                GameResources raid = new GameResources("Raid: Shadow Legends","https://raidshadowlegends.com/","https://youtu.be/KnnGpDBkwvo");
+                GameResources base = new GameResources("Base Attack Force","https://www.baseattackforce.com/","https://youtu.be/SVw9gJryfPM");
+                GameResources war = new GameResources("War Thunder","https://warthunder.com/en","https://youtu.be/jD9tE6tM0mQ");
+                GameResources rail = new GameResources("Rail Nation","https://www.railnation.us/","https://youtu.be/WLEgLDeFssw");
+                GameResources mineCraft = new GameResources("Mine Craft","https://www.minecraft.net/en-us","https://youtu.be/ET9n1aKzY-0");
 
                 gameRepo.save(wordle);
                 gameRepo.save(cookieClicker);
@@ -41,6 +42,7 @@ public class Populator implements CommandLineRunner {
                 gameRepo.save(base);
                 gameRepo.save(war);
                 gameRepo.save(rail);
+                gameRepo.save(mineCraft);
 
 
                 NoaaResources rainbowFish = new NoaaResources("The Rainbow Fish", "Marcus Pfister","https://www.amazon.com/Rainbow-Fish-Marcus-Pfister/dp/1558580093/ref=zg_bs_2823_2/133-6260264-4696624?pd_rd_i=1558580093&psc=1");

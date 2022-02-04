@@ -12,13 +12,15 @@ public class GameResources {
     private Long id;
     private String name;
     private String gamesToPlayUrl;
+    private String gameWalkThroughVid;
 
     public GameResources(){
 
     }
-    public GameResources(String name, String gamesToPlayUrl){
+    public GameResources(String name, String gamesToPlayUrl,String gameWalkThroughVid){
         this.name = name;
         this.gamesToPlayUrl = gamesToPlayUrl;
+        this.gameWalkThroughVid = gameWalkThroughVid;
     }
 
     public Long getId() {
@@ -31,6 +33,10 @@ public class GameResources {
 
     public String getGamesToPlayUrl() {
         return gamesToPlayUrl;
+    }
+
+    public String getGameWalkThroughVid() {
+        return gameWalkThroughVid;
     }
 
 
