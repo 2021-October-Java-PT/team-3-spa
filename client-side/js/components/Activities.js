@@ -24,19 +24,4 @@ export default function Activities() {
     `;
 }
 
-// return `
-//     <h1 class="activities-page-header">Bored?</h1>
-//     <h3 class="activities-page-subtitle>Check out the options below for activity ideas</h3>
-//     <div class="activities-grid-container">
-//     ${activities
-//       .map((activity) => {
-//         return `
-//           <li class='activities-grid-item'>${activity.species}
 
-//           </li>
-//           `;
-//       })
-//       .join("")}
-//       </ul>
-//     </div>
-//     `;

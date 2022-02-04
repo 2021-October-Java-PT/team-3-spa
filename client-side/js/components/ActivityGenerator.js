@@ -7,9 +7,9 @@ export default function ActivityGenerator(boredObj) {
             <h3 class="activity-item">Participants: ${boredObj.participants}</h3>
             
         
-        <button class="reset-cooking" id="activity-button">Try Again</button>
+        <button class="reset-cooking" id="project-button">Try Again</button>
         <br></br>
-        <button class="reset-activities" id="activity-button"> Activities</button>
+        <button class="reset-activities" id="project-button"> Activities</button>
         <audio level up>
             <source src="assets/Level Up Sound Effect.mp3" type="audio/mpeg"> 
             Your browser does not support the audio tag. 
