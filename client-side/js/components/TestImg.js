@@ -1,6 +1,6 @@
 export default function TestImg(metObject) {
   return `
-    <img id=page-image src='${metObject.primaryImage}'/>
-    <img id=page-image src='${metObject.speciesimage}'/>
+    <img id=page-image src='${metObject.primaryImageSmall}'/>
+    
     `;
 }

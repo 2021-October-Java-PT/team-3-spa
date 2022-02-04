@@ -1,10 +1,10 @@
 import About from "./components/About";
 import Activities from "./components/Activities";
 import ActivityGenerator from "./components/ActivityGenerator";
+import ArtGallery from "./components/ArtGallery";
 import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Home from "./components/Home"
-import MarineLife from "./components/MarineLife";
 import TestImg from "./components/TestImg";
 import apiHelpers from "./components/apiHelpers";
 
@@ -15,7 +15,7 @@ function buildPage() {
   header();
   navContact();
   navHome();
-  navMarineLife();
+  navArtGallery();
   navActivities();
   navAbout();
   showPicture();
@@ -42,13 +42,20 @@ function navHome() {
   });
 }
 
-function navMarineLife() {
-  const marineLifeElem = document.querySelector(".nav-list__marineLife");
-  marineLifeElem.addEventListener("click", () => {
+function navArtGallery() {
+  const artGalleryElem = document.querySelector(".nav-list__artGallery");
+  artGalleryElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     console.log('firing')
-    app.innerHTML = MarineLife();
-    marineLifePopulator();
+    app.innerHTML = ArtGallery();
+    // fetch("https://ids.lib.harvard.edu/ids/iiif/426398978/full/,150/0/default.jpg")
+    //   .then(res = res.json())
+    //   .then(result => {
+    //     console.log(result)
+    //     image.src = result.message
+    //   })
+    //   .catch(err=>console.log(err))
+    artGalleryPopulator();
   });
 }
 
@@ -221,12 +228,12 @@ function showPicture() {
   );
 }
 
-function marineLifePopulator() {
-  const pictureLocation = document.querySelector(".content");
+function artGalleryPopulator() {
+  const pictureLocation = document.querySelector(".art-gallery");
   apiHelpers.getRequest(
-    "https://www.fishwatch.gov/api/species/red-snapper/species name",
-    (marineObject) => {
-      pictureLocation.innerHTML = TestImg(marineObject);
+    "https://collectionapi.metmuseum.org/public/collection/v1/objects/3288",
+    (metObject) => {
+      pictureLocation.innerHTML = TestImg(metObject);
     }
   );
 }
