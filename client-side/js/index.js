@@ -19,6 +19,7 @@ function buildPage() {
   navActivities();
   navAbout();
   showPicture();
+  navGames();
 }
 
 function home(){
@@ -73,6 +74,17 @@ function navAbout() {
   aboutElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = About();
+  });
+}
+
+function navGames() {
+  const gameElem = document.querySelector(".nav-list__game");
+  gameElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    crud.getRequest('http://localhost:8080/game-resources', games => {
+      app.innerHTML = Games(games);
+    })
+    
   });
 }
 
@@ -237,4 +249,6 @@ function artGalleryPopulator() {
     }
   );
 }
+
+
 
