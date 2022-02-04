@@ -36,6 +36,9 @@ b {
   justify-content: center;
   font-family: "Kavivanar", cursive;
   font-size: 3em;
+  color: crimson;
+  text-shadow: gray;
+  font-size: 77px;
 
   animation: welcome-header 3.5s;
   animation-delay: 2s;
@@ -99,6 +102,133 @@ b {
 
 /* Activities */
 
+.activities-page-header {
+  color: #1b1c40;
+  font-size: 75px;
+  font-weight: 500px;
+}
+
+.activities-page-subtitle {
+  color: #1b1c40;
+  margin-top: 2rem;
+  font-size: 30px;
+}
+
+.activities-grid-container {
+  display: grid;
+  grid-template-columns: 17% 17% 17% 19% 17% 17%;
+  margin-top: 3rem;
+}
+
+.cooking-button {
+  width: 150px;
+  height: 70px;
+  border-width: 4px;
+  border-radius: 35px;
+  font-size: 115%;
+  font-size: bold;
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: #32a856;
+}
+
+.education-button {
+  width: 150px;
+  height: 70px;
+  border-width: 4px;
+  border-radius: 35px;
+  font-size: 115%;
+  font-size: bold;
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: #0b68bf;
+}
+
+.music-button {
+  width: 150px;
+  height: 70px;
+  border-width: 4px;
+  border-radius: 35px;
+  font-size: 115%;
+  font-size: bold;
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: #c4b421;
+}
+
+.recreational-button {
+  width: 175px;
+  height: 70px;
+  border-width: 4px;
+  border-radius: 35px;
+  font-size: 115%;
+  font-size: bold;
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: #a832a8;
+}
+
+.relaxation-button {
+  width: 150px;
+  height: 70px;
+  border-width: 4px;
+  border-radius: 35px;
+  font-size: 115%;
+  font-size: bold;
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: #c91652;
+}
+
+.social-button {
+  width: 150px;
+  height: 70px;
+  border-width: 4px;
+  border-radius: 35px;
+  font-size: 115%;
+  font-size: bold;
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: #e36b10;
+}
+
+#activity-button:hover {
+  cursor: pointer;
+  background-color: honeydew;
+  color: gray;
+}
+
+#project-button {
+  width: 100px;
+  height: 70px;
+  border-width: 3px;
+  border-radius: 30px;
+  font-size: 75%;
+  font-size: bold;
+  font-weight: bold;
+  background-color: #cfb0cc;
+  color: #f6f7ed;
+  clip-path: margin-box;
+  margin-right: 40px;
+}
+
+#project-button:hover {
+  transition: linear;
+  cursor: pointer;
+  color: black;
+  background-color: #e3ab62;
+}
+
+#project-button:active {
+  font-size: 50%;
+  cursor: pointer;
+}
+
+.giphy-embed {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 /* Activity Generator */
 .activity-item__list {
   list-style: none;
@@ -106,6 +236,11 @@ b {
 }
 
 .activity-item {
-  list-style: none;
-  text-align: left;
+  margin-right: 2rem;
+  font-size: 25px;
+  color: #1b1c40;
+}
+
+#activity-listing {
+  color: #1b1c40;
 }
