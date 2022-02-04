@@ -1,5 +1,6 @@
 export default function About() {
   return `
+
        <h1>Our Team</h1>
       <div class="grid-container-about">
            <div class="grid-item-image">
@@ -54,4 +55,5 @@ export default function About() {
    
       </div>
        `;
+
 }

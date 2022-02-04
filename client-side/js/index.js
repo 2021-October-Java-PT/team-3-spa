@@ -22,7 +22,9 @@ function buildPage() {
   navActivities();
   navAbout();
   showPicture();
+
   navGames();
+
 }
 
 function home() {
@@ -51,12 +53,14 @@ function navArtGallery() {
 
   const artGalleryElem = document.querySelector(".nav-list__artGallery");
   artGalleryElem.addEventListener("click", () => {
+
     apiHelpers.getRequest(
       "https://collectionapi.metmuseum.org/public/collection/v1/objects/307599",
       (pieces) => {
         app.innerHTML = ArtGallery(pieces);
       }
     );
+
   });
 }
 
@@ -91,6 +95,7 @@ function navAbout() {
   });
 }
 
+
 function navGames() {
   const app = document.querySelector("#app");
   const gameElem = document.querySelector(".nav-list__games");
@@ -116,6 +121,7 @@ function renderGameInfo() {
     }
   });
 }
+
 
 function navActivities() {
   const app = document.querySelector("#app");
@@ -183,6 +189,7 @@ function activityRandomizer() {
       );
     }
   });
+
   activitiesRefresh();
   randomizeAgain();
 }
@@ -264,3 +271,4 @@ function showPicture() {
   // }
   // );
 }
+

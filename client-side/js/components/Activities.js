@@ -2,11 +2,14 @@ export default function Activities() {
   return `
   <h1 class="activities-page-header">Bored?</h1>
   
+
+  <p> Let's do something about that.  </p>
   
   
-  
+
   <iframe  src="https://giphy.com/embed/l378AEZceMwWboAQE" width="480" height="329" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-  <p> Let's fix that!  </p>  
+  <h2 class="activities-page-subtitle"> Check out one of the options below for activity ideas </h2>
+
 <div class="activities-grid-container">
     <button type="button" class="cooking-button" id="activity-button"  >Cooking</button>
     <button type="button" class="education-button" id="activity-button" >Education</button>
@@ -18,7 +21,7 @@ export default function Activities() {
    
 </div>
    
-<h2 class="activities-page-subtitle"> Check out the options above for activity ideas </h2>
+
 
     `;
 }
