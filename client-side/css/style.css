@@ -1,6 +1,5 @@
 .homeBody {
-  /* background-color: darkslategray; */
-  background-image: linear-gradient(to bottom, #ffffff, #2ebda38c);
+  background-image: linear-gradient(to top, #ffffff, #2ebda38c);
   color: rgb(41, 64, 72);
   height: 1200px; 
   background-image: no-repeat;
@@ -60,9 +59,9 @@ b {
   justify-content: center;
 }
 
-#page-image {
-  height: 50%;
-  width: 75%;
+.page-image {
+  height: 15%;
+  width: auto;
 }
 
 .about_details {
@@ -110,4 +109,8 @@ b {
 .activity-item {
   list-style: none;
   text-align: left;
+}
+
+.footer{
+  align-items: bottom;
 }
