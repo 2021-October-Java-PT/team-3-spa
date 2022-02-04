@@ -3,10 +3,13 @@ import Activities from "./components/Activities";
 import ActivityGenerator from "./components/ActivityGenerator";
 import ArtGallery from "./components/ArtGallery";
 import Contact from "./components/Contact";
+import Game from "./components/Game";
+import Games from "./components/Games";
 import Header from "./components/Header";
 import Home from "./components/Home"
 import TestImg from "./components/TestImg";
 import apiHelpers from "./components/apiHelpers";
+import crud from "./crud/crud";
 
 buildPage();
 
@@ -20,6 +23,7 @@ function buildPage() {
   navAbout();
   showPicture();
   navGames();
+  
 }
 
 function home(){
@@ -78,14 +82,26 @@ function navAbout() {
 }
 
 function navGames() {
-  const gameElem = document.querySelector(".nav-list__game");
+  const app = document.querySelector("#app");
+  const gameElem = document.querySelector(".nav-list__games");
   gameElem.addEventListener("click", () => {
-    const app = document.querySelector("#app");
     crud.getRequest('http://localhost:8080/game-resources', games => {
       app.innerHTML = Games(games);
     })
+    renderGameInfo();
     
   });
+}
+
+function renderGameInfo() {
+  app.addEventListener('click', (event) => {
+    if (event.target.classList.contains('games-list__title')) {
+      const gameId = event.target.querySelector('#gameId').value;
+      crud.getRequest(`http://localhost:8080/game-resources/${gameId}`, game => {
+        app.innerHTML = Game(game);
+      })
+    }
+  })
 }
 
 
