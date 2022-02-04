@@ -1,3 +1,4 @@
+
 export default function ArtGallery(pieces) {
   return `
   
@@ -13,3 +14,4 @@ export default function ArtGallery(pieces) {
        <p>More pieces coming soon</p>
       `;
 }
+

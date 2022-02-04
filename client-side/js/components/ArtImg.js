@@ -1,6 +1,8 @@
-export default function TestImg(marineObject) {
+export default function ArtImg(metObject) {
   return `
-    <img id='page-image' src='${marineObject.primaryImage}'/>
-    <p id='page-info'> ${marineObject.title}</p>
+  
+    <img id='page-image' src='${metObject.primaryImage}'/>
+    <p id='page-info'> ${metObject.title}</p>
+   
     `;
 }

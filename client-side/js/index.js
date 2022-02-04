@@ -54,12 +54,14 @@ function navArtGallery() {
   const artGalleryElem = document.querySelector(".nav-list__artGallery");
   artGalleryElem.addEventListener("click", () => {
 
+
     apiHelpers.getRequest(
       "https://collectionapi.metmuseum.org/public/collection/v1/objects/307599",
       (pieces) => {
         app.innerHTML = ArtGallery(pieces);
       }
     );
+
 
   });
 }
@@ -264,11 +266,8 @@ function randomizeAgain() {
 
 function showPicture() {
   const pictureLocation = document.querySelector(".content");
-  // apiHelpers.getRequest(
-  //   "https://collectionapi.metmuseum.org/public/collection/v1/objects/248008",
-  //   (metObject) => {
   pictureLocation.innerHTML = TestImg();
-  // }
-  // );
+
 }
+
 
