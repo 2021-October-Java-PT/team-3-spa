@@ -6,7 +6,7 @@ import Contact from "./components/Contact";
 import Game from "./components/Game";
 import Games from "./components/Games";
 import Header from "./components/Header";
-import Home from "./components/Home"
+import Home from "./components/Home";
 import TestImg from "./components/TestImg";
 import apiHelpers from "./components/apiHelpers";
 import crud from "./crud/crud";
@@ -23,10 +23,9 @@ function buildPage() {
   navAbout();
   showPicture();
   navGames();
-  
 }
 
-function home(){
+function home() {
   const homeElem = document.querySelector(".nav-list__home");
   const app = document.querySelector("#app");
   app.innerHTML = Home();
@@ -48,28 +47,39 @@ function navHome() {
 }
 
 function navArtGallery() {
+  const app = document.querySelector("#app");
+
   const artGalleryElem = document.querySelector(".nav-list__artGallery");
   artGalleryElem.addEventListener("click", () => {
-    const app = document.querySelector("#app");
-    console.log('firing')
-    app.innerHTML = ArtGallery();
-    // fetch("https://ids.lib.harvard.edu/ids/iiif/426398978/full/,150/0/default.jpg")
-    //   .then(res = res.json())
-    //   .then(result => {
-    //     console.log(result)
-    //     image.src = result.message
-    //   })
-    //   .catch(err=>console.log(err))
-    artGalleryPopulator();
+    apiHelpers.getRequest(
+      "https://collectionapi.metmuseum.org/public/collection/v1/objects/307599",
+      (pieces) => {
+        app.innerHTML = ArtGallery(pieces);
+      }
+    );
   });
 }
+
+// function artGalleryPopulator() {
+//   const app = document.querySelector("#app");
+//   app.addEventListener("click", (event) => {
+//     if (event.target.classList.contains("games-list__title")) {
+//       const gameId = event.target.querySelector("#gameId").value;
+//       crud.getRequest(
+//         `http://localhost:8080/api/game-resources/${gameId}`,
+//         (game) => {
+//           app.innerHTML = Game(game);
+//         }
+//       );
+//     }
+//   });
+// }
 
 function navContact() {
   const contactElem = document.querySelector(".nav-list__contact");
   contactElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Contact();
-    
   });
 }
 
@@ -85,26 +95,27 @@ function navGames() {
   const app = document.querySelector("#app");
   const gameElem = document.querySelector(".nav-list__games");
   gameElem.addEventListener("click", () => {
-    crud.getRequest('http://localhost:8080/api/game-resources', games => {
+    crud.getRequest("http://localhost:8080/api/game-resources", (games) => {
       app.innerHTML = Games(games);
-    })
+    });
     renderGameInfo();
-    
   });
 }
 
 function renderGameInfo() {
   const app = document.querySelector("#app");
-  app.addEventListener('click', (event) => {
-    if (event.target.classList.contains('games-list__title')) {
-      const gameId = event.target.querySelector('#gameId').value;
-      crud.getRequest(`http://localhost:8080/api/game-resources/${gameId}`, game => {
-        app.innerHTML = Game(game);
-      })
+  app.addEventListener("click", (event) => {
+    if (event.target.classList.contains("games-list__title")) {
+      const gameId = event.target.querySelector("#gameId").value;
+      crud.getRequest(
+        `http://localhost:8080/api/game-resources/${gameId}`,
+        (game) => {
+          app.innerHTML = Game(game);
+        }
+      );
     }
-  })
+  });
 }
-
 
 function navActivities() {
   const app = document.querySelector("#app");
@@ -171,7 +182,6 @@ function activityRandomizer() {
         }
       );
     }
-    
   });
   activitiesRefresh();
   randomizeAgain();
@@ -243,29 +253,14 @@ function randomizeAgain() {
       );
     }
   });
- 
 }
-
 
 function showPicture() {
   const pictureLocation = document.querySelector(".content");
   // apiHelpers.getRequest(
   //   "https://collectionapi.metmuseum.org/public/collection/v1/objects/248008",
   //   (metObject) => {
-      pictureLocation.innerHTML = TestImg();
-    // }
+  pictureLocation.innerHTML = TestImg();
+  // }
   // );
 }
-
-function artGalleryPopulator() {
-  const pictureLocation = document.querySelector(".art-gallery");
-  apiHelpers.getRequest(
-    "https://collectionapi.metmuseum.org/public/collection/v1/objects/3288",
-    (metObject) => {
-      pictureLocation.innerHTML = TestImg(metObject);
-    }
-  );
-}
-
-
-
