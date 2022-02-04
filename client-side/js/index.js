@@ -55,13 +55,6 @@ function navArtGallery() {
     const app = document.querySelector("#app");
     console.log("firing");
     app.innerHTML = ArtGallery();
-    // fetch("https://ids.lib.harvard.edu/ids/iiif/426398978/full/,150/0/default.jpg")
-    //   .then(res = res.json())
-    //   .then(result => {
-    //     console.log(result)
-    //     image.src = result.message
-    //   })
-    //   .catch(err=>console.log(err))
     artGalleryPopulator();
   });
 }
@@ -250,20 +243,16 @@ function randomizeAgain() {
 
 function showPicture() {
   const pictureLocation = document.querySelector(".content");
-  // apiHelpers.getRequest(
-  //   "https://collectionapi.metmuseum.org/public/collection/v1/objects/248008",
-  //   (metObject) => {
   pictureLocation.innerHTML = TestImg();
-  // }
-  // );
+
 }
 
 function artGalleryPopulator() {
   const pictureLocation = document.querySelector(".art-gallery");
   apiHelpers.getRequest(
-    "https://collectionapi.metmuseum.org/public/collection/v1/objects/3288",
+    "https://collectionapi.metmuseum.org/public/collection/v1/objects/248008",
     (metObject) => {
-      pictureLocation.innerHTML = TestImg(metObject);
+      pictureLocation.innerHTML = ArtImg(metObject);
     }
   );
 }

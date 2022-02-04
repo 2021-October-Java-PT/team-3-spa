@@ -1,5 +1,3 @@
-// import default function MarineImg();
-
 export default function ArtGallery() {
     return `
 
