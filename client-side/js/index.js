@@ -2,9 +2,9 @@ import About from "./components/About";
 import Activities from "./components/Activities";
 import ActivityGenerator from "./components/ActivityGenerator";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Home from "./components/Home";
+import Home from "./components/Home"
+import MarineLife from "./components/MarineLife";
 import TestImg from "./components/TestImg";
 import apiHelpers from "./components/apiHelpers";
 
@@ -15,6 +15,7 @@ function buildPage() {
   header();
   navContact();
   navHome();
+  navMarineLife();
   navActivities();
   navAbout();
   showPicture();
@@ -32,14 +33,22 @@ function header() {
   headerElem.innerHTML = Header();
 }
 
-
-
 function navHome() {
   const homeElem = document.querySelector(".nav-list__home");
   homeElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Home();
     showPicture();
+  });
+}
+
+function navMarineLife() {
+  const marineLifeElem = document.querySelector(".nav-list__marineLife");
+  marineLifeElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    console.log('firing')
+    app.innerHTML = MarineLife();
+    marineLifePopulator();
   });
 }
 
@@ -212,5 +221,13 @@ function showPicture() {
   );
 }
 
-
+function marineLifePopulator() {
+  const pictureLocation = document.querySelector(".content");
+  apiHelpers.getRequest(
+    "https://www.fishwatch.gov/api/species/red-snapper/species name",
+    (marineObject) => {
+      pictureLocation.innerHTML = TestImg(marineObject);
+    }
+  );
+}
 
