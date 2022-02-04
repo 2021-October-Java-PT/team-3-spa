@@ -5,20 +5,22 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class BoredResources {
+public class GameResources {
 
     @Id
     @GeneratedValue
     private Long id;
     private String name;
     private String gamesToPlayUrl;
+    private String gameWalkThroughVid;
 
-    public BoredResources(){
+    public GameResources(){
 
     }
-    public BoredResources(String name, String gamesToPlayUrl){
+    public GameResources(String name, String gamesToPlayUrl,String gameWalkThroughVid){
         this.name = name;
         this.gamesToPlayUrl = gamesToPlayUrl;
+        this.gameWalkThroughVid = gameWalkThroughVid;
     }
 
     public Long getId() {
@@ -31,6 +33,10 @@ public class BoredResources {
 
     public String getGamesToPlayUrl() {
         return gamesToPlayUrl;
+    }
+
+    public String getGameWalkThroughVid() {
+        return gameWalkThroughVid;
     }
 
 

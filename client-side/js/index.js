@@ -1,32 +1,39 @@
 import About from "./components/About";
 import Activities from "./components/Activities";
 import ActivityGenerator from "./components/ActivityGenerator";
+import ArtGallery from "./components/ArtGallery";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Home from "./components/Home";
+import Home from "./components/Home"
 import TestImg from "./components/TestImg";
 import apiHelpers from "./components/apiHelpers";
 
 buildPage();
 
 function buildPage() {
+  home();
   header();
-  footer();
   navContact();
   navHome();
+  navArtGallery();
   navActivities();
   navAbout();
   showPicture();
+  navGames();
 }
+
+function home(){
+  const homeElem = document.querySelector(".nav-list__home");
+  const app = document.querySelector("#app");
+  app.innerHTML = Home();
+  showPicture();
+}
+
 function header() {
   const headerElem = document.querySelector(".header");
   headerElem.innerHTML = Header();
 }
-function footer() {
-  const footerElem = document.querySelector(".footer");
-  footerElem.innerHTML = Footer();
-}
+
 function navHome() {
   const homeElem = document.querySelector(".nav-list__home");
   homeElem.addEventListener("click", () => {
@@ -36,11 +43,29 @@ function navHome() {
   });
 }
 
+function navArtGallery() {
+  const artGalleryElem = document.querySelector(".nav-list__artGallery");
+  artGalleryElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    console.log('firing')
+    app.innerHTML = ArtGallery();
+    // fetch("https://ids.lib.harvard.edu/ids/iiif/426398978/full/,150/0/default.jpg")
+    //   .then(res = res.json())
+    //   .then(result => {
+    //     console.log(result)
+    //     image.src = result.message
+    //   })
+    //   .catch(err=>console.log(err))
+    artGalleryPopulator();
+  });
+}
+
 function navContact() {
   const contactElem = document.querySelector(".nav-list__contact");
   contactElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Contact();
+    
   });
 }
 
@@ -49,6 +74,17 @@ function navAbout() {
   aboutElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = About();
+  });
+}
+
+function navGames() {
+  const gameElem = document.querySelector(".nav-list__game");
+  gameElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    crud.getRequest('http://localhost:8080/game-resources', games => {
+      app.innerHTML = Games(games);
+    })
+    
   });
 }
 
@@ -118,6 +154,7 @@ function activityRandomizer() {
         }
       );
     }
+    
   });
   activitiesRefresh();
   randomizeAgain();
@@ -189,6 +226,7 @@ function randomizeAgain() {
       );
     }
   });
+ 
 }
 
 
@@ -201,3 +239,16 @@ function showPicture() {
     }
   );
 }
+
+function artGalleryPopulator() {
+  const pictureLocation = document.querySelector(".art-gallery");
+  apiHelpers.getRequest(
+    "https://collectionapi.metmuseum.org/public/collection/v1/objects/3288",
+    (metObject) => {
+      pictureLocation.innerHTML = TestImg(metObject);
+    }
+  );
+}
+
+
+

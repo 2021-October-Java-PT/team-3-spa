@@ -1,7 +1,9 @@
 .homeBody {
   /* background-color: darkslategray; */
   background-image: linear-gradient(to bottom, #ffffff, #2ebda38c);
-  color: rgb(155, 150, 150);
+  color: rgb(41, 64, 72);
+  height: 1200px; 
+  background-image: no-repeat;
 }
 
 p {
